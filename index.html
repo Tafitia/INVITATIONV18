@@ -55,9 +55,9 @@
             border: 2px solid #f5f5dc;
             padding: 10px;
             box-shadow: 0 0 10px #f5f5dc;
-            max-width: 100%;
-            width: 150px;
-            height: 150px;
+            width: 175px;
+            height: 175px;
+            display: inline-block;
         }
         .warning {
             color: #d4af37;
@@ -77,7 +77,6 @@
             }
         }
     </style>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -91,20 +90,11 @@
             </div>
             <div class="qr-info">
                 <p>📌 Pour en savoir plus sur la mise à jour, veuillez scanner ce code QR :</p>
-                <div class="qr-code" id="qrcode"></div>
+                <div class="qr-code">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?data=Date:%20Samedi%205%20avril%202025%0AHeure:%209h00-17h00%0ALieu:%20[Localisation]%0AContact:%200386296685&size=200x200" alt="QR Code pour l'invitation" width="175" height="175">
+                </div>
             </div>
         </div>
     </div>
-
-    <script>
-        new QRCode(document.getElementById("qrcode"), {
-            text: "Date: Samedi 5 avril 2025\nHeure: 9h00-17h00\nLieu: [Localisation]\nContact: 0386296685",
-            width: 150,
-            height: 150,
-            colorDark : "#ffffff",
-            colorLight : "#000000",
-            correctLevel : QRCode.CorrectLevel.H
-        });
-    </script>
 </body>
 </html>
