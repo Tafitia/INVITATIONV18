@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚠️ Invitation - Mise à jour v18.0 ⚠️</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            background-color: #1c1c1c;
+            color: #f5f5dc;
+            padding: 20px;
+            margin: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: #2c2c2c;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px #f5f5dc;
+            border: 2px solid #f5f5dc;
+        }
+        h1 {
+            color: #ffffff;
+        }
+        p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .photo-qr-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .photo {
+            border: 2px solid #f5f5dc;
+            padding: 10px;
+            box-shadow: 0 0 10px #f5f5dc;
+            max-width: 100%;
+        }
+        .qr-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            max-width: 250px;
+        }
+        .qr-code {
+            margin-top: 10px;
+            border: 2px solid #f5f5dc;
+            padding: 10px;
+            box-shadow: 0 0 10px #f5f5dc;
+            max-width: 100%;
+            width: 128px;
+            height: 128px;
+        }
+        .warning {
+            color: #d4af37;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        @media (max-width: 768px) {
+            .photo-qr-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .photo {
+                margin-bottom: 20px;
+            }
+            .qr-info {
+                text-align: center;
+            }
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>⚠️ SYSTEM UPDATE DETECTED ⚠️</h1>
+        <p class="warning">Nouvelle version disponible : Tafita v18.0</p>
+        <p>📡 Connexion requise pour accéder à la version <strong>v18.0</strong></p>
+        <p>🎉 J'ai l'honneur de te convier à me rejoindre pour célebrer ce passage à une version améliorée 🎉</p>
+        <div class="photo-qr-container">
+            <div class="photo">
+                <img src="fifi.jpg" alt="Tafita" width="200">
+            </div>
+            <div class="qr-info">
+                <p>📌 Pour en savoir plus sur la mise à jour, veuillez scanner ce code QR :</p>
+                <div class="qr-code" id="qrcode"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        new QRCode(document.getElementById("qrcode"), {
+            text: "Date: Samedi 5 avril 2025\nHeure: 9h00-17h00\nLieu: [Localisation]\nContact: 0386296685",
+            width: 128,
+            height: 128,
+            colorDark : "#f5f5dc",
+            colorLight : "#1c1c1c",
+            correctLevel : QRCode.CorrectLevel.H
+        });
+    </script>
+</body>
+</html>
